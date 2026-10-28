@@ -1,0 +1,17 @@
+---
+- name: Install apache2
+  hosts: webservers
+  become: true
+
+
+  tasks:
+    - name: Install apache2
+      ansible.builtin.apt:
+        name: apache2
+        state: latest
+
+    - name: Install tree
+      ansible.builtin.apt:
+        name: tree
+        state: latest
+
